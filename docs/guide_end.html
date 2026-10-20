@@ -1,0 +1,106 @@
+<section class="page">
+<h2 id="s-prof">7. Le Prof IA : fonctionnement</h2>
+<p>Le prof suit à la lettre le <b>prompt système officiel RSuta</b> : patient, chaleureux, jamais de réponse sèche, toujours 3 étapes, jamais « en tant qu'IA », uniquement le programme béninois (MEMP / MESRS).</p>
+<table class="std"><thead><tr><th style="width:15%">Niveau</th><th style="width:30%">Style</th><th>Exemple d'introduction et d'encouragement</th></tr></thead><tbody>
+<tr><td><b>CEP</b></td><td>Mots très simples, exemples de mangues, d'école, du marché de Golo</td><td>« Viens, on regarde ça tranquillement, comme au marché de Golo 🥭 » … « Tu vas avoir ton CEP, je crois en toi ! »</td></tr>
+<tr><td><b>BEPC</b></td><td>Ado, humour, foot, TikTok, mais rigoureux</td><td>« Pas de souci ! On va résoudre ça ensemble, comme une équipe de foot ⚽ » … « Tu vas avoir ton BEPC, je crois en toi ! »</td></tr>
+<tr><td><b>BAC</b></td><td>Sérieux, méthode, astuces du correcteur</td><td>« On structure la réponse pour aller chercher tous les points » … « Le correcteur va sourire en lisant ta copie. Courage pour le BAC ! »</td></tr>
+<tr><td><b>LICENCE</b></td><td>Universitaire, références, plan détaillé</td><td>« Adoptons une démarche universitaire : hypothèses, résolution, interprétation. »</td></tr>
+</tbody></table>
+<h4>Format de réponse (JSON officiel)</h4>
+<pre>{
+  "etape1_titre": "On comprend l'exercice",
+  "etape1_texte": "On veut trouver x. 2x veut dire 2 fois x. C'est comme une balance en équilibre…",
+  "etape2_titre": "On applique la méthode",
+  "etape2_texte": "On enlève 5 des deux côtés : 2x + 5 - 5 = 13 - 5 → 2x = 8. On divise par 2 : x = 4.",
+  "etape3_titre": "On vérifie",
+  "etape3_texte": "On remplace x par 4 : 2 × 4 + 5 = 13 ✅ C'est correct !",
+  "conclusion": "La solution est x = 4 🎉 Tu as pigé ?",
+  "question_suivante": "Veux-tu un exercice similaire pour t'entraîner ?",
+  "niveau_difficulte": "facile"
+}</pre>
+<h4>Ce que le prof résout hors-ligne</h4>
+<div class="grid3">
+<div class="box b"><h4>Algèbre</h4>Équations et inéquations du 1er et 2nd degré, équations de degré 3 à racines entières, systèmes 2×2, développement, factorisation (identités remarquables), dérivées, variations.</div>
+<div class="box b"><h4>Calcul et géométrie</h4>Priorités opératoires détaillées, fractions, décimaux, pourcentages, PGCD / PPCM (Euclide), décomposition, Pythagore, aires et périmètres, règle de trois, statistiques.</div>
+<div class="box b"><h4>Gestion et sciences</h4>Intérêts simples / composés, TVA 18 %, amortissements linéaire / dégressif, loi d'Ohm, puissance, masse volumique, poids, vitesse.</div>
+<div class="box y"><h4>Français</h4>Conjugaison (présent, futur, imparfait, passé composé…), méthodologie de rédaction, résumé, commentaire.</div>
+<div class="box y"><h4>Sujets rédactionnels</h4>Dissertation (littéraire, philosophique), étude de cas, questions d'explication : analyse du sujet, problématique, plan détaillé et conseils.</div>
+<div class="box y"><h4>Définitions</h4>Base de notions du programme (SVT, PCT, économie, droit, informatique, management…) avec liens vers les leçons.</div>
+</div>
+<h4 style="margin-top:3mm">Activer le mode en ligne (optionnel)</h4>
+<p><b>Paramètres → Prof IA</b> : saisir l'URL de l'API (compatible OpenAI), la clé et le modèle ; choisir le mode (<b>Automatique</b> recommandé) puis toucher <b>Tester</b>. En cas de coupure internet, le prof hors-ligne prend automatiquement le relais.</p>
+</section>
+
+<section class="page">
+<h2 id="s-multi">8. Ordinateur, tablette et thème sombre</h2>
+<p>Sur un écran large (ordinateur Windows, navigateur), la barre du bas laisse place à un <b>menu latéral</b> bleu au motif africain, qui donne accès à toutes les rubriques. Les contenus s'affichent sur deux colonnes lorsque la place le permet.</p>
+{{DESK_RESULT}}
+<div class="row-ph" style="align-items:center">{{DESK_COURS}}{{TABLET}}</div>
+</section>
+
+<section class="page">
+<h2>Thème sombre</h2>
+<p>Paramètres → Apparence → Thème : <b>Sombre</b> (ou <b>Automatique</b> pour suivre le réglage du téléphone). Idéal pour réviser le soir et économiser la batterie.</p>
+<div class="row-ph">{{PH_DARK1}}{{PH_DARK2}}</div>
+<h4>Le module Réviser sur ordinateur</h4>
+{{DESK_REV}}
+</section>
+
+<section class="page">
+<h2 id="s-faq">9. Questions fréquentes et dépannage</h2>
+<dl class="faq">
+<dt>RSuta fonctionne-t-il vraiment sans internet ?</dt><dd>Oui : cours, quiz, épreuves, scan (lecture des photos), Prof IA, voix et comptes fonctionnent hors-ligne. Pour la version web, ouvrir l'application une première fois avec internet (et toucher <i>Paramètres → Préparer</i>). Seul le mode « en ligne » du prof, optionnel, utilise internet.</dd>
+<dt>La photo est refusée (« je vois flou »).</dt><dd>Se placer près d'une fenêtre ou d'une lampe, tenir le téléphone parallèle à la feuille, cadrer entre les 4 coins jaunes et attendre la mise au point. On peut aussi toucher <i>Saisir le texte</i>.</dd>
+<dt>Les sujets types sont-ils des annales officielles ?</dt><dd>Non. Les {{N_EP}} sujets types et les examens blancs sont <b>créés pour RSuta</b> conformément au programme béninois ; chacun porte la mention « Sujet type (non officiel) ». Pour travailler une vraie annale, la soumettre via <i>Épreuves → Soumettre</i> (texte ou photo).</dd>
+<dt>Comment bien utiliser le module Réviser ?</dt><dd>1) Faire le <b>diagnostic</b> ; 2) <b>générer le plan</b> et vérifier la date de l'examen ; 3) chaque jour, toucher <i>Commencer</i> sur l'Accueil (fiche + cartes + quiz du chapitre) ; 4) passer l'<b>examen blanc express</b> proposé chaque semaine ; 5) consulter les <b>points faibles</b> et recalculer le plan.</dd>
+<dt>La page photographiée contient plusieurs exercices, je n'en veux qu'un.</dt><dd>Après la photo, encadrer l'exercice voulu avec le doigt puis toucher <i>Lire la zone</i>.</dd>
+<dt>Le texte lu contient des erreurs.</dt><dd>Corriger directement dans la fenêtre « Vérifie le texte lu » avant de toucher Résoudre. L'écriture manuscrite peu lisible est plus difficile à lire que l'imprimé ; le mode en ligne avec « vision » améliore la lecture.</dd>
+<dt>J'ai oublié mon mot de passe.</dt><dd>« Mot de passe oublié ? » sur l'écran de connexion : saisir le code de récupération ou la réponse secrète. À défaut, l'administrateur peut générer un mot de passe temporaire.</dd>
+<dt>Le lecteur de QR de la classe ne s'ouvre pas.</dt><dd>Même cause que la caméra : autoriser l'accès. Sinon, coller le code RSD1… / RSR1… ou utiliser « Fichier .rsuta ».</dd>
+<dt>La caméra ne s'affiche pas.</dt><dd>Autoriser l'accès à la caméra (navigateur ou paramètres du téléphone). Sinon, le bouton Scanner ouvre l'appareil photo du système, et « Importer une photo » reste disponible.</dd>
+<dt>Pas de voix lors de l'écoute.</dt><dd>Vérifier le volume et installer une voix française (Android : Paramètres → Synthèse vocale ; Windows : Paramètres → Heure et langue → Voix). Choisir la voix dans Paramètres → Voix.</dd>
+<dt>Le micro ne fonctionne pas.</dt><dd>La dictée dépend du navigateur (Chrome, Edge). Sinon, taper la question au clavier.</dd>
+<dt>Changer de téléphone sans perdre ses données ?</dt><dd>Paramètres → Données → <b>Exporter</b> sur l'ancien appareil, puis <b>Importer</b> le fichier sur le nouveau.</dd>
+<dt>Plusieurs élèves sur le même ordinateur ?</dt><dd>Oui : chacun crée son compte ; les progressions et devoirs sont séparés. Un compte administrateur peut gérer la salle.</dd>
+<dt>Qui contacter en cas de problème ou pour un code Premium ?</dt><dd>L'éditeur <b>BSH - Best Services and House</b> : +229 01 48 52 45 90 • contact@bestservicesandhouse.site • www.bestservicesandhouse.site (aussi dans Profil → Aide et contact).</dd>
+<dt>Comment changer de niveau (par exemple après le BEPC) ?</dt><dd>Profil → Modifier le profil → Niveau. Les cours, quiz et le langage du prof s'adaptent immédiatement.</dd>
+<dt>Comment fonctionnent les points XP et les badges ?</dt><dd>Chaque activité rapporte des XP (leçon, quiz, devoir, exercice interactif, carte mémoire, défi du jour, examen blanc, devoir de classe). Les XP font monter de niveau (Débutant → Légende) ; chaque jour actif prolonge la série 🔥. 20 badges se débloquent automatiquement (première leçon, 100 % à un quiz, 7 jours d'affilée, niveau 10…). Tout se consulte dans « Mes progrès » (menu latéral ou carte du Profil).</dd>
+<dt>Comment partager une bonne note ?</dt><dd>Bouton <b>Partager</b> sur le résultat d'un exercice, d'un quiz, d'un examen blanc ou depuis « Mes progrès » : RSuta dessine une image carrée (1080 × 1080) avec le score. Télécharger l'image puis l'envoyer sur WhatsApp / Facebook / TikTok. Aucune donnée ne quitte l'appareil.</dd>
+<dt>Un enseignant peut-il utiliser RSuta avec toute sa classe, sans internet ?</dt><dd>Oui. Compte créé en cochant « Je suis enseignant(e) » : menu latéral « Ma classe » → Nouvelle classe → Nouveau devoir (exercices saisis ou générés, durée, date). Le devoir est partagé par <b>code recopié au tableau, QR code ou fichier</b> — le réseau n'est pas nécessaire. Les élèves l'ouvrent dans « Devoirs de classe », composent (chrono si prévu) et rendent. Chaque copie produit un code que l'enseignant importe d'un coup (collage multiple, QR, fichiers) ; les réponses à correction automatique sont notées immédiatement, le reste est à vérifier ; la moyenne et la réussite par exercice s'affichent, avec export <b>Excel/CSV</b>.</dd>
+<dt>Le rapport pour les parents, c'est quoi ?</dt><dd>Menu « Mes progrès » (ou Profil) → bouton « Rapport pour les parents » : un bilan des 30 derniers jours (jours actifs, leçons, quiz, examens, maîtrise par matière, badges) avec des conseils, à imprimer ou enregistrer en PDF (bouton Imprimer).</dd>
+</dl>
+</section>
+
+<section class="page">
+<h2 id="s-lim">10. Limites et évolutions</h2>
+<h4>Limites actuelles (en toute transparence)</h4>
+<ul>
+<li><b>Écriture manuscrite</b> : la lecture hors-ligne est excellente sur un énoncé imprimé ou bien écrit, moins fiable sur une écriture difficile ; le texte reste toujours modifiable.</li>
+<li><b>Sujets rédactionnels hors-ligne</b> : le prof fournit l'analyse, la problématique, le plan détaillé et la méthode, mais pas une rédaction complète ; celle-ci nécessite le mode en ligne.</li>
+<li><b>Figures</b> : RSuta trace lui-même les courbes et tableaux de ses corrections, mais un exercice reposant sur une figure du sujet (géométrie dans l'espace, lecture graphique) doit être décrit en texte.</li>
+<li><b>Comptes locaux</b> : les comptes et la progression sont propres à chaque appareil (export / import pour transférer). De même, dans une classe sans réseau, devoirs et copies voyagent par code / QR / fichier, pas par serveur central.</li>
+<li><b>Contenu</b> : les leçons et les {{N_EP}} sujets types suivent le programme béninois ; les sujets types sont <b>non officiels</b> (ils ne reproduisent pas d'annales) et chacun porte cette mention. Les annales officielles peuvent être soumises via « Épreuves ».</li>
+<li><b>Dates d'examen</b> : la date du compte à rebours est indicative ; la corriger dans « Mon plan » dès la publication du calendrier officiel.</li>
+</ul>
+<h4>Évolutions possibles</h4>
+<ul>
+<li>Synchronisation des comptes sur un serveur d'établissement (API REST sur le même schéma de base de données).</li>
+<li>Paiement mobile (MTN MoMo, Moov Money) pour l'abonnement Premium.</li>
+<li>Intégration d'annales officielles 2015-2024, sous réserve d'autorisation des ministères.</li>
+<li>Explications vocales en fon, yoruba et bariba ; synchronisation optionnelle des classes via un serveur d'établissement (le maillage code / QR / fichier, 100 % hors-ligne, restera disponible).</li>
+</ul>
+<div class="box b" style="margin-top:8mm"><h4>Contenu du livrable (RSuta.zip)</h4>
+<table class="std" style="margin:0"><tbody>
+<tr><td style="width:40%"><b>rsuta/app/</b></td><td>Application complète (web / PWA), à ouvrir ou héberger telle quelle</td></tr>
+<tr><td><b>rsuta/Lancer-RSuta-Windows.bat</b></td><td>Lancement immédiat sous Windows</td></tr>
+<tr><td><b>rsuta/desktop/</b>, <b>package.json</b></td><td>Application Windows (Electron) et scripts de compilation</td></tr>
+<tr><td><b>rsuta/capacitor.config.json</b>, <b>scripts/</b></td><td>Application Android / iOS (Capacitor)</td></tr>
+<tr><td><b>rsuta/.github/workflows/build.yml</b></td><td>Compilation automatique de l'.exe et de l'.apk</td></tr>
+<tr><td><b>rsuta/tests/</b></td><td>Tests automatisés ({{N_TESTS}} tests du moteur : <code>node tests/engine_test.js</code>) et parcours d'interface</td></tr>
+<tr><td><b>rsuta/docs/</b></td><td>Ce guide (PDF) et les captures d'écran</td></tr>
+<tr><td><b>rsuta/README.md</b></td><td>Notice technique</td></tr>
+</tbody></table></div>
+{{EDBOX}}
+<p class="center" style="margin-top:8mm;font-size:13pt;font-weight:800;color:#1f4fd1">RSuta — Ton prof IA qui ne dort pas ✦<br><span style="color:#0d2260;font-size:11pt">« Tu vas avoir ton examen, je crois en toi ! »</span></p>
+</section>

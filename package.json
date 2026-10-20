@@ -1,0 +1,62 @@
+{
+  "name": "rsuta",
+  "productName": "RSuta",
+  "version": "1.2.0",
+  "description": "RSuta — Ton prof IA qui ne dort pas (CEP, BEPC, BAC, Licence professionnelle — Bénin). Web, Windows, Android.",
+  "author": {
+    "name": "BSH - Best Services and House",
+    "email": "contact@bestservicesandhouse.site",
+    "url": "https://www.bestservicesandhouse.site"
+  },
+  "license": "UNLICENSED",
+  "main": "desktop/main.js",
+  "scripts": {
+    "start": "electron .",
+    "serve": "node scripts/serve.js",
+    "dist:win": "electron-builder --win nsis portable --x64",
+    "cap:sync": "npx cap sync android",
+    "android:debug": "npx cap sync android && cd android && ./gradlew assembleDebug",
+    "dist:nsis": "electron-builder --win nsis --x64 --publish never"
+  },
+  "devDependencies": {
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3",
+    "@capacitor/cli": "^6.2.0",
+    "@capacitor/core": "^6.2.0",
+    "@capacitor/android": "^6.2.0"
+  },
+  "build": {
+    "appId": "bj.rsuta.app",
+    "productName": "RSuta",
+    "copyright": "© 2026 BSH - Best Services and House",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "desktop/**/*",
+      "app/**/*",
+      "package.json"
+    ],
+    "win": {
+      "icon": "app/icons/icon.ico",
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "legalTrademarks": "RSuta est une marque de BSH - Best Services and House"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "RSuta",
+      "language": "1036",
+      "artifactName": "RSuta-Setup-${version}-x64.${ext}",
+      "uninstallDisplayName": "RSuta ${version}"
+    },
+    "portable": {
+      "artifactName": "RSuta-${version}-portable.exe"
+    }
+  },
+  "homepage": "https://www.bestservicesandhouse.site"
+}

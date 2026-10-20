@@ -1,0 +1,46 @@
+name: Build RSuta (Windows + Android)
+on:
+  push: { branches: [ main ] }
+  workflow_dispatch:
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm install
+      - run: npx electron-builder --win nsis portable --x64 --publish never
+      - uses: actions/upload-artifact@v4
+        with:
+          name: RSuta-Windows
+          path: |
+            dist/*.exe
+
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: 17 }
+      - uses: android-actions/setup-android@v3
+      - run: npm install
+      - run: npx cap add android
+      - run: bash scripts/android-permissions.sh
+      - name: Icônes
+        run: |
+          for d in mipmap-mdpi:48 mipmap-hdpi:72 mipmap-xhdpi:96 mipmap-xxhdpi:144 mipmap-xxxhdpi:192; do
+            dir=${d%%:*}; size=${d##*:}
+            convert app/icons/icon-512.png -resize ${size}x${size} android/app/src/main/res/$dir/ic_launcher.png
+            convert app/icons/icon-512.png -resize ${size}x${size} android/app/src/main/res/$dir/ic_launcher_round.png
+            cp android/app/src/main/res/$dir/ic_launcher.png android/app/src/main/res/$dir/ic_launcher_foreground.png || true
+          done
+      - run: npx cap sync android
+      - run: cd android && chmod +x gradlew && ./gradlew assembleDebug
+      - uses: actions/upload-artifact@v4
+        with:
+          name: RSuta-Android-APK
+          path: android/app/build/outputs/apk/debug/*.apk

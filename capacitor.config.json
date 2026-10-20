@@ -1,0 +1,7 @@
+{
+  "appId": "bj.rsuta.app",
+  "appName": "RSuta",
+  "webDir": "app",
+  "android": { "allowMixedContent": false, "backgroundColor": "#1f4fd1" },
+  "server": { "androidScheme": "https" }
+}

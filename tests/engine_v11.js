@@ -1,0 +1,36 @@
+require('/home/user/rsuta/app/js/math.js'); const E = require('/home/user/rsuta/app/js/engine.js'); require('/home/user/rsuta/app/js/engine2.js'); require('/home/user/rsuta/app/js/engine3.js');
+const T = process.argv.slice(2).length ? process.argv.slice(2) : [
+ 'Soit (Un) la suite arithmétique de premier terme U0 = 3 et de raison r = 4. Calculer U10 et la somme des 11 premiers termes.',
+ 'On considère la suite géométrique de premier terme u1 = 2 et de raison q = 3. Calculer u5.',
+ 'Soit la suite définie par u0 = 5 et u(n+1) = u(n) - 2. Calculer u20.',
+ 'Soit la suite définie par u0 = 64 et u_{n+1} = 1/2 u_n. Calculer u6.',
+ 'Résoudre dans C l\'équation z² - 2z + 5 = 0',
+ 'Résoudre dans ℂ : z^2 + 4z + 13 = 0',
+ 'Écrire sous forme algébrique z = (2 + 3i)(1 - i)',
+ 'Mettre sous forme algébrique z = (3 + 2i)/(1 - i)',
+ 'Déterminer le module et un argument du nombre complexe z = 1 + i√3',
+ 'Résoudre dans ℂ l\'équation (1 + i)z = 3 - i',
+ 'Convertir 150° en radians',
+ 'Calculer cos(π/3), sin(π/6) et tan(π/4)',
+ 'Résoudre dans [0 ; 2π[ l\'équation cos x = 1/2',
+ 'Résoudre dans R : 2sin x - 1 = 0',
+ 'Résoudre l\'équation sin x = 2',
+ 'Calculer la limite en +∞ de f(x) = (2x² + 3x - 1)/(x² + 5)',
+ 'Soit f(x) = (x² - 4)/(x - 2). Calculer la limite de f quand x tend vers 2.',
+ 'Soit f(x) = (x + 1)/(x - 3). Déterminer les limites de f en 3 et en +∞.',
+ 'Calculer l\'intégrale de 0 à 2 de (3x² + 2x) dx',
+ 'Déterminer la primitive F de f(x) = 3x² - 4x + 1 qui s\'annule en 1',
+ 'Calculer ∫_1^3 (x^2 - 1) dx',
+ 'Une urne contient 5 boules rouges et 3 boules blanches. On tire une boule au hasard. Calculer la probabilité de tirer une boule rouge.',
+ 'Une urne contient 4 boules rouges et 6 boules noires. On tire simultanément deux boules. Calculer la probabilité d\'obtenir deux boules de même couleur.',
+ 'On lance un dé équilibré. Quelle est la probabilité d\'obtenir un nombre pair ? un multiple de 3 ?',
+ 'On lance deux dés. Quelle est la probabilité que la somme soit égale à 7 ?',
+ 'On lance une pièce équilibrée 5 fois. Calculer la probabilité d\'obtenir exactement 3 piles.',
+ 'De combien de façons peut-on choisir 3 délégués parmi 30 élèves ?',
+ 'Un podium : de combien de façons peut-on attribuer les 3 premières places parmi 8 coureurs ?',
+ 'Calculer 6! et C(10, 3)',
+ 'Combien d\'anagrammes du mot BENIN ?',
+ // anciens : ne doivent pas être volés
+ 'Résoudre 2x + 5 = 13', 'Résoudre x² - 5x + 6 = 0', 'Calculer 3/4 + 5/6', 'Conjugue le verbe finir au futur', 'Soit f(x) = x^3 - 3x + 1. Étudier les variations de f.', 'Calculer le PGCD de 84 et 126'
+];
+for (const t of T) { const r = E.solve(t, { niveau: 'BAC' }); console.log('■', t, '\n  →', r.solver, '|', r.conclusion); if (process.env.V) console.log(r.etapes.map(e=>e.texte).join('\n---\n')); }
