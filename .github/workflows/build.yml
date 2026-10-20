@@ -7,12 +7,12 @@ jobs:
   windows:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: { node-version: 20 }
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: { node-version: 20, package-manager-cache: false }
       - run: npm install
       - run: npx electron-builder --win nsis portable --x64 --publish never
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: RSuta-Windows
           path: |
@@ -21,10 +21,10 @@ jobs:
   android:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: { node-version: 20 }
-      - uses: actions/setup-java@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: { node-version: 20, package-manager-cache: false }
+      - uses: actions/setup-java@v5
         with: { distribution: temurin, java-version: 17 }
       - uses: android-actions/setup-android@v3
       - run: npm install
@@ -40,7 +40,7 @@ jobs:
           done
       - run: npx cap sync android
       - run: cd android && chmod +x gradlew && ./gradlew assembleDebug
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: RSuta-Android-APK
           path: android/app/build/outputs/apk/debug/*.apk
