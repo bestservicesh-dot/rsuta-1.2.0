@@ -26,7 +26,6 @@ jobs:
         with: { node-version: 20, package-manager-cache: false }
       - uses: actions/setup-java@v5
         with: { distribution: temurin, java-version: 17 }
-      - uses: android-actions/setup-android@v3
       - run: npm install
       - run: npx cap add android
       - run: bash scripts/android-permissions.sh
